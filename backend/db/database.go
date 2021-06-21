@@ -19,7 +19,7 @@ var err error
 
 func InitialMigration() {
 	db, err = gorm.Open(postgres.New(postgres.Config{
-		DSN:                  "host=db user=postgres password=simple dbname=postgres port=5432 sslmode=disable ",
+		DSN:                  "host=database user=postgres password=simple dbname=postgres port=5432 sslmode=disable ",
 		PreferSimpleProtocol: true,
 	}), &gorm.Config{})
 	if err != nil {

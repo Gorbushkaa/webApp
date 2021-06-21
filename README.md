@@ -1,3 +1,3 @@
 # webApp
 
-clone repo and use docker-compose up -d --build
+clone repo and use docker-compose up -d -build
