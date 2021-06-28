@@ -30,7 +30,7 @@ export default {
   methods: {
     async fillData() {
       await axios
-        .get("http://localhost:3000/get_last_requests")
+        .get(`http://${process.env.VUE_APP_BACKEND_URL}/get_last_requests`)
         .then((response) => {
           this.datacollection = {
             datasets: [

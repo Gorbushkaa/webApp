@@ -13,10 +13,10 @@ import axios from "axios";
 export default {
   methods: {
     start_requests() {
-      axios.post("http://localhost:3000/?request_state=true");
+      axios.post(`http://${process.env.VUE_APP_BACKEND_URL}/?request_state=true`);
     },
     stop_requests() {
-      axios.post("http://localhost:3000/?request_state=false");
+      axios.post(`http://${process.env.VUE_APP_BACKEND_URL}/?request_state=false`);
     },
   },
 };

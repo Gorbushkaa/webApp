@@ -25,6 +25,7 @@ services:
     depends_on:
       - db
     environment:
+      - FRONTEND_URL=localhost:4000
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=simple
       - POSTGRES_HOST=db
@@ -39,6 +40,8 @@ services:
       - "4000:80"
     depends_on:
       - backend
+    environment:
+      - BACKEND_URL=localhost:3000
     networks:
       - net
 

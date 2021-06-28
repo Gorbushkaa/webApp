@@ -27,7 +27,7 @@ export default {
   methods: {
     submitForm() {
       axios
-        .post("http://localhost:3000/settings", this.form)
+        .post(`http://${process.env.VUE_APP_BACKEND_URL}/settings`, this.form)
         .then((response) => {
             console.log(response)
         })

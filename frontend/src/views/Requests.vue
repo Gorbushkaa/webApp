@@ -32,7 +32,7 @@ export default {
   // Fetches posts when the component is created.
   created() {
     axios
-      .get('http://localhost:3000/requests')
+      .get(`http://${process.env.VUE_APP_BACKEND_URL}/requests`)
       .then((response) => {
         // JSON responses are automatically parsed
         console.log(response.data)
